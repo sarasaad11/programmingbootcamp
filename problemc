@@ -1,0 +1,18 @@
+import java.util.Scanner ;
+
+public class Main {
+
+public static void main (String[] args) {
+Scanner input = new Scanner(System.in);
+
+String keyboardFormat = "qwertyuiopasdfghjkl;zxcvbnm,./";
+
+int pos = input.next().charAt(0) == 'L' ? 1 : -1;
+
+String message = input.next();
+
+for (char letter : message.toCharArray()) {
+System.out.print(keyboardFormat.charAt(keyboardFormat.indexOf(letter) + pos ));
+}
+}
+}
